@@ -1,7 +1,9 @@
-import axios from "axios";
+import axios from 'axios';
+
 export const axiosWithAuth = () => {
     return axios.create({
-        baseURL: 'http://localhost:5000/api',
+        //config object
+        baseURL: 'http://localhost:5000/',
         headers: {
             Authorization: localStorage.getItem('token')
         }

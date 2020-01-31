@@ -20,12 +20,12 @@ class Login extends React.Component {
 
   login = e => {
     e.preventDefault();
-    axiosWithAuth().post('/lgoin', this.state.credentials)
+    axiosWithAuth().post('/api/login', this.state.credentials)
     .then(res => {
       localStorage.setItem('token', res.data.payload);
       this.props.history.push('/bubbles')
     })
-    .catch(err => console.error(err))
+    .catch(err => console.log(err))
   }
   
 
